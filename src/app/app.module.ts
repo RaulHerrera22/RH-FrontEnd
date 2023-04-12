@@ -43,12 +43,11 @@ import { NeweducacionComponent } from './components/educacion/neweducacion.compo
     NeweducacionComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgCircleProgressModule.forRoot({}),
-    HttpClientModule,
-    FormsModule,
-    RouterModule
+   AppRoutingModule,
+   NgCircleProgressModule.forRoot({}),
+   HttpClientModule,
+   FormsModule,
+   RouterModule
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
