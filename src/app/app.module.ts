@@ -15,13 +15,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 import { EditExperienciaComponent } from './components/experiencia-l/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experiencia-l/new-experiencia.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditSkillComponent } from './components/hard/edit-skill.component';
+import { NewSkillComponent } from './components/hard/new-skill.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +43,16 @@ import { NeweducacionComponent } from './components/educacion/neweducacion.compo
     NewExperienciaComponent,
     EditeducacionComponent,
     NeweducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent
   ],
   imports: [
-   AppRoutingModule,
-   NgCircleProgressModule.forRoot({}),
-   HttpClientModule,
-   FormsModule,
-   RouterModule
+    BrowserModule,
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]

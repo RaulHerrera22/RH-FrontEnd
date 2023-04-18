@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'http://localhost:8080/expLab/';
+ // expURL = 'http://localhost:8080/expLab/';
+    expURL = 'https://rhback.onrender.com/expLab/';
 
   constructor(private httpClient: HttpClient) { }
 

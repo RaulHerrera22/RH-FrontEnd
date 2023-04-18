@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -12,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class ExperienciaLComponent implements OnInit {
     exp: Experiencia[] = [];
     
-    constructor(private sExperiencia: SExperienciaService, private tokenService : TokenService, private router : Router){}
+    constructor(private sExperiencia: SExperienciaService, private tokenService : TokenService){}
 
 
   isLogged = false;
@@ -33,7 +32,7 @@ export class ExperienciaLComponent implements OnInit {
   }
 
   delete(id?: number) {
-    if (id!= undefined) {
+    if (id != undefined) {
       this.sExperiencia.delete(id).subscribe(
         data => {
           this.cargarExperiencia();

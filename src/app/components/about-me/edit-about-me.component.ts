@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
@@ -44,4 +44,4 @@ uploadImage($event: any) {
   this.imageService.uploadImage($event, name)
 }
 }
-
+*/
