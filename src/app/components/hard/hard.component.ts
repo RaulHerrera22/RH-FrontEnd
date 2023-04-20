@@ -30,8 +30,8 @@ export class HardComponent implements OnInit {
     })
   }
 
-  delete(id: number){
-    if(id != undefined){
+  delete(id: number | undefined){
+    if(id != null){
       this.skillS.delete(id).subscribe(data =>{
         this.cargarSkills();
       }, err => {

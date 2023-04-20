@@ -1,4 +1,4 @@
-/*import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./edit-about-me.component.css']
 })
 export class EditAboutMeComponent implements OnInit{
-  persona: Persona = null;
+  persona: Persona | null = null;
 
   constructor(private activatedRouter : ActivatedRoute, private personaService : PersonaService, private router: Router){}
 
@@ -26,8 +26,8 @@ ngOnInit(): void {
 
 onUpdate(): void {
   const id = this.activatedRouter.snapshot.params['id'];
-  this.persona.img = this.imageService.url
-  this.personaService.update(id, this.persona).subscribe(
+  this.persona!.img = this.imageService.url
+  this.personaService.update(id, this.persona!).subscribe(
     data => {
       alert("Perfil modificado exitosamente")
       this.router.navigate(['']);
@@ -44,4 +44,4 @@ uploadImage($event: any) {
   this.imageService.uploadImage($event, name)
 }
 }
-*/
+

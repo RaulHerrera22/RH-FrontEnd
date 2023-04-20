@@ -9,7 +9,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
   styleUrls: ['./editeducacion.component.css']
 })
 export class EditeducacionComponent implements OnInit {
-    educacion: Educacion = null;
+    educacion: Educacion | null = null;
 
 
 
@@ -32,7 +32,7 @@ export class EditeducacionComponent implements OnInit {
 
   onUpdate(): void {
     const id =  this.ActivatedRouter.snapshot.params['id'];
-    this.educationS.update(id, this.educacion).subscribe(
+    this.educationS.update(id, this.educacion!).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {

@@ -10,7 +10,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class EditSkillComponent implements OnInit {
 
-  skill: Skill = null;
+  skill: Skill | null = null;
 
   constructor(private skillS: SkillService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
@@ -28,7 +28,7 @@ export class EditSkillComponent implements OnInit {
 
   onUpdate() {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillS.update(id, this.skill).subscribe(
+    this.skillS.update(id, this.skill!).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {

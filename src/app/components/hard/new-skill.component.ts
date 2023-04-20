@@ -9,8 +9,8 @@ import { SkillService } from 'src/app/service/skill.service';
   styleUrls: ['./new-skill.component.css']
 })
 export class NewSkillComponent implements OnInit {
-  nombre: string;
-  porcentaje: number;
+  nombre!: string;
+  porcentaje!: number;
 
   constructor(private skillS: SkillService, private router: Router) { }
 
