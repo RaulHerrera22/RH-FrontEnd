@@ -4,7 +4,7 @@ import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/s
 @Injectable({
   providedIn: 'root'
 })
-export class SImageService {
+export class ImageService {
   url: string | null = null;
 
   constructor(private storage: Storage) { }

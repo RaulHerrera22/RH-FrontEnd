@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/persona.model';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -10,7 +11,7 @@ import { Persona } from '../model/persona.model';
 })
 export class PersonaService {
   
-  URL = 'https://rhback.onrender.com/personas';
+  URL = environment.URL + 'personas/';
 
   constructor(private httpClient: HttpClient) { }
 

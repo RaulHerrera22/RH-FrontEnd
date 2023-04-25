@@ -4,14 +4,16 @@ import { Observable } from 'rxjs';
 import { NuevoUsuario } from '../model/nuevo-usuario';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   //authURL='http://localhost:8080/auth/';
-  authURL= 'https://rhback.onrender.com/auth/'
-
+  //authURL= 'https://rhback.onrender.com/auth/'
+  authURL= environment.URL + 'auth/'
+  
   constructor(private httpClient: HttpClient) { }
 
 

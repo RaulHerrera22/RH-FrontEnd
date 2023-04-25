@@ -27,6 +27,7 @@ import { NewSkillComponent } from './components/hard/new-skill.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditeducacionComponent,
     NeweducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditAboutMeComponent
   ],
   imports: [
     BrowserModule,

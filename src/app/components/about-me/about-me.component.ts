@@ -14,7 +14,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class AboutMeComponent implements OnInit {
   
-  persona: Persona = new Persona ("", "" , "", "");
+  persona: Persona =  new Persona ("", "" , "", "");
 
   constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
